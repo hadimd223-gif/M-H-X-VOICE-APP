@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#030712"
+    android:padding="16px">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="12dp"
+        android:background="@drawable/border_bottom">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="M H X VOICE TOOL // SHIZUKU PRO"
+            android:textColor="#00ff66"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:fontFamily="monospace"/>
+
+        <TextView
+            android:id="@+id/txtSystemStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SHIZUKU OFF"
+            android:textColor="#ff003c"
+            android:textSize="10sp"
+            android:padding="4dp"
+            android:background="#1a0005"/>
+    </LinearLayout>
+
+    <!-- Shizuku Control Panel -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#050f15"
+        android:padding="12dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SHIZUKU / ACCESSIBILITY"
+                android:textColor="#00ff66"
+                android:textSize="12sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/txtShizukuStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status: Permission Required"
+                android:textColor="#64748b"
+                android:textSize="10sp"/>
+        </LinearLayout>
+
+        <Switch
+            android:id="@+id/switchShizuku"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <!-- Audio Vault / Import Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="#000000"
+        android:padding="12dp"
+        android:layout_marginTop="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="> AUDIO VAULT (IMPORT &amp; INJECT)"
+            android:textColor="#00ff66"
+            android:textSize="11sp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/btnImportAudio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📁 IMPORT AUDIO FILE"
+            android:backgroundTint="#00ff66"
+            android:textColor="#030712"
+            android:textSize="11sp"
+            android:layout_marginTop="8dp"/>
+
+        <ListView
+            android:id="@+id/listViewAudio"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:divider="#00ff66"
+            android:dividerHeight="1dp"/>
+    </LinearLayout>
+
+</LinearLayout>
+          
